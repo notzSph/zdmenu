@@ -9,4 +9,6 @@ stest
 config.h
 
 # backup files
+*.orig
 config.def.h.bak
+*~
