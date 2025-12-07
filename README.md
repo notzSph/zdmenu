@@ -4,7 +4,7 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![Language](https://img.shields.io/badge/language-C-informational-cyan)
 ![Display](https://img.shields.io/badge/display-X11-lightgrey)
-![License](https://img.shields.io-badge/license-MIT--X-lightgrey)
+![License](https://img.shields.io-badge/license-MIT-X-lightgrey)
 
 ## Description
 
