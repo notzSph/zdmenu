@@ -1,0 +1,4 @@
+#!/bin/sh
+# zdmenu_run - run programs via zdmenu
+
+zdmenu_path | zdmenu "$@" | ${SHELL:-/bin/sh} &

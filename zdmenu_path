@@ -1,0 +1,18 @@
+#!/bin/sh
+# zdmenu_path - cache and list executables for zdmenu
+
+cachedir="${XDG_CACHE_HOME:-"$HOME/.cache"}"
+if [ -d "$cachedir" ]; then
+    cache="$cachedir"/zdmenu_run
+else
+    cache="$HOME"/.zdmenu_cache
+fi
+
+if [ ! -f "$cache" ]; then
+    IFS=:
+    for dir in $PATH; do
+        [ -d "$dir" ] && ls "$dir"
+    done | awk '!seen[$0]++' | sort -u > "$cache"
+fi
+
+cat "$cache"
