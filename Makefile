@@ -27,8 +27,8 @@ clean:
 
 dist: clean
 	mkdir -p zdmenu-$(VERSION)
-	cp LICENSE Makefile README arg.h config.def.h config.mk zdmenu.1\
-		drw.h util.h dmenu_path dmenu_run stest.1 $(SRC)\
+	cp LICENSE Makefile README.md arg.h config.def.h config.mk zdmenu.1\
+		drw.h util.h zdmenu_path zdmenu_run stest.1 $(SRC)\
 		zdmenu-$(VERSION)
 	tar -cf zdmenu-$(VERSION).tar zdmenu-$(VERSION)
 	gzip zdmenu-$(VERSION).tar
@@ -36,10 +36,10 @@ dist: clean
 
 install: all
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
-	cp -f zdmenu dmenu_path dmenu_run stest $(DESTDIR)$(PREFIX)/bin
+	cp -f zdmenu zdmenu_path zdmenu_run stest $(DESTDIR)$(PREFIX)/bin
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/zdmenu
-	chmod 755 $(DESTDIR)$(PREFIX)/bin/dmenu_path
-	chmod 755 $(DESTDIR)$(PREFIX)/bin/dmenu_run
+	chmod 755 $(DESTDIR)$(PREFIX)/bin/zdmenu_path
+	chmod 755 $(DESTDIR)$(PREFIX)/bin/zdmenu_run
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/stest
 	mkdir -p $(DESTDIR)$(MANPREFIX)/man1
 	sed "s/VERSION/$(VERSION)/g" < zdmenu.1 > $(DESTDIR)$(MANPREFIX)/man1/zdmenu.1
@@ -49,8 +49,8 @@ install: all
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/zdmenu\
-		$(DESTDIR)$(PREFIX)/bin/dmenu_path\
-		$(DESTDIR)$(PREFIX)/bin/dmenu_run\
+		$(DESTDIR)$(PREFIX)/bin/zdmenu_path\
+		$(DESTDIR)$(PREFIX)/bin/zdmenu_run\
 		$(DESTDIR)$(PREFIX)/bin/stest\
 		$(DESTDIR)$(MANPREFIX)/man1/zdmenu.1\
 		$(DESTDIR)$(MANPREFIX)/man1/stest.1
