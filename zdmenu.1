@@ -1,8 +1,9 @@
-.TH ZDMENU 1 zdmenu\-VERSION
+.TH ZDMENU 1 "2025-12-08" zdmenu\-VERSION
 .SH NAME
-zDmenu \- dynamic menu
+.Nm zdmenu
+.Nd zSph dynamic menu
 .SH SYNOPSIS
-.B zdmenu
+.Nm
 .RB [ \-bfiv ]
 .RB [ \-l
 .IR lines ]
@@ -25,10 +26,12 @@ zDmenu \- dynamic menu
 .P
 .BR dmenu_run " ..."
 .SH DESCRIPTION
-.B zDmenu
+.Nm
 is a dynamic menu for X, which reads a list of newline\-separated items from
 stdin.  When the user selects an item and presses Return, their choice is printed
-to stdout and zDmenu terminates.  Entering text will narrow the items to those
+to stdout and
+.Nm
+terminates.  Entering text will narrow the items to those
 matching the tokens in the input.
 .P
 .B dmenu_run
@@ -38,20 +41,25 @@ which lists programs in the user's $PATH and runs the result in their $SHELL.
 .SH OPTIONS
 .TP
 .B \-b
-zDmenu appears at the bottom of the screen.
+.Nm
+appears at the bottom of the screen.
 .TP
 .B \-f
-zDmenu grabs the keyboard before reading stdin if not reading from a tty. This
+.Nm
+grabs the keyboard before reading stdin if not reading from a tty. This
 is faster, but will lock up X until stdin reaches end\-of\-file.
 .TP
 .B \-i
-zDmenu matches menu items case insensitively.
+.Nm
+matches menu items case insensitively.
 .TP
 .BI \-l " lines"
-zDmenu lists items vertically, with the given number of lines.
+.Nm
+lists items vertically, with the given number of lines.
 .TP
 .BI \-m " monitor"
-zDmenu is displayed on the monitor number supplied. Monitor numbers are starting
+.Nm
+is displayed on the monitor number supplied. Monitor numbers are starting
 from 0.
 .TP
 .BI \-p " prompt"
@@ -81,7 +89,8 @@ prints version information to stdout, then exits.
 .BI \-w " windowid"
 embed into windowid.
 .SH USAGE
-zDmenu is completely controlled by the keyboard.  Items are selected using the
+.Nm
+is completely controlled by the keyboard.  Items are selected using the
 arrow keys, page up, page down, home, and end.
 .TP
 .B Tab
